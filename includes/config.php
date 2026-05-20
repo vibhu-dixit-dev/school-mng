@@ -4,8 +4,9 @@
   $db_user = getenv('DB_USER') ?: 'root';
   $db_pass = getenv('DB_PASS') ?: 'root';
   $db_name = getenv('DB_NAME') ?: 'sms_project';
+  $db_port = getenv('DB_PORT') ?: 3306;
 
-  $db_conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+  $db_conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name, $db_port);
 
   if (!$db_conn) {
     echo 'Connection Failed';
