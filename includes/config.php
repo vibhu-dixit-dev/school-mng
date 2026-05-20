@@ -1,10 +1,10 @@
 <?php
 
-  $db_host = getenv('DB_HOST') ?: 'localhost';
-  $db_user = getenv('DB_USER') ?: 'root';
-  $db_pass = getenv('DB_PASS') ?: 'root';
-  $db_name = getenv('DB_NAME') ?: 'sms_project';
-  $db_port = getenv('DB_PORT') ?: 3306;
+  $db_host = trim(getenv('DB_HOST')) ?: 'localhost';
+  $db_user = trim(getenv('DB_USER')) ?: 'root';
+  $db_pass = trim(getenv('DB_PASS')) ?: 'root';
+  $db_name = trim(getenv('DB_NAME')) ?: 'sms_project';
+  $db_port = trim(getenv('DB_PORT')) ?: 3306;
 
   $db_conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name, $db_port);
 
