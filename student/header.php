@@ -1,12 +1,12 @@
 <?php
  //session_start();
- $site_url = 'http://localhost/sms-project/';
+ $site_url = (getenv('SITE_URL') ?: '/');
   if(isset($_SESSION['login']))
   {
     if(isset($_SESSION['user_type']) && $_SESSION['user_type'] != 'student')
     {
       $user_type = $_SESSION['user_type'];
-      header('Location: /sms-project/'.$user_type.'/dashboard.php');
+      header('Location: /'.$user_type.'/dashboard.php');
     }
   }
   else 

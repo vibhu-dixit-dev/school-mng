@@ -422,7 +422,7 @@
             var formdata = new FormData(this);
             jQuery.ajax({
                 type: "post",
-                url: "http://localhost/sms-project/admin/ajax.php",
+                url: "/admin/ajax.php",
                 data: formdata,
                 cache: false,
                 contentType: false,

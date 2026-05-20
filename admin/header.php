@@ -6,7 +6,7 @@
     if(isset($_SESSION['user_type']) && $_SESSION['user_type'] != 'admin')
     {
       $user_type = $_SESSION['user_type'];
-      header('Location: /sms-project/'.$user_type.'/dashboard.php');
+      header('Location: /'.$user_type.'/dashboard.php');
     }
   }
   else 

@@ -1,12 +1,19 @@
 <?php
 
-  $db_conn = mysqli_connect('localhost', 'root', 'root','sms_project');
+  $db_host = getenv('DB_HOST') ?: 'localhost';
+  $db_user = getenv('DB_USER') ?: 'root';
+  $db_pass = getenv('DB_PASS') ?: 'root';
+  $db_name = getenv('DB_NAME') ?: 'sms_project';
+
+  $db_conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
   if (!$db_conn) {
     echo 'Connection Failed';
     exit;
   }
-  session_start();
+  if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+  }
   date_default_timezone_set('Asia/Kolkata');
   include('functions.php');
 
@@ -20,7 +27,7 @@
       $query = mysqli_query($db_conn, "INSERT INTO `settings` (setting_key, setting_value) VALUES ('site_url' , '{$_POST['site_url']}')") or die('Error while inserting');
       
       if($query){
-        header('Location: /sms-project/index.php'); die;
+        header('Location: /index.php'); die;
       }
     }
 

@@ -473,7 +473,7 @@ if (isset($_GET['action'])) {
       var formdata = new FormData(this);
       jQuery.ajax({
         type: "post",
-        url: "http://localhost/sms-project/actions/student-registration.php",
+        url: "/actions/student-registration.php",
         data: formdata,
         cache: false,
         contentType: false,
@@ -484,7 +484,7 @@ if (isset($_GET['action'])) {
         success: function(response) {
           console.log(response);
           // if (response.success == true) {
-            location.href = 'http://localhost/sms-project/admin/user-account.php?user=student';
+            location.href = '/admin/user-account.php?user=student';
           // }
         },
         complete: function() {
@@ -500,7 +500,7 @@ if (isset($_GET['action'])) {
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
 
-      <form action="http://localhost/sms-project/actions/student-registration.php" method="post" enctype="multipart/form-data">
+      <form action="/actions/student-registration.php" method="post" enctype="multipart/form-data">
         <div class="modal-body">
           <input type="file" name="csv" id="">
         </div>

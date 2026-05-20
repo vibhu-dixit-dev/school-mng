@@ -1,5 +1,5 @@
-  <?php include('includes/config.php') ?>
-  <?php include('header.php') ?>
+<?php include('includes/config.php') ?>
+<?php include('header.php') ?>
 
   <!--Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark default-color">
@@ -45,7 +45,7 @@
           </a>
           <div class="dropdown-menu dropdown-menu-right dropdown-default"
             aria-labelledby="navbarDropdownMenuLink-333">
-            <a class="dropdown-item" href="/sms-project/admin/dashboard.php">Dashboard</a>
+            <a class="dropdown-item" href="/admin/dashboard.php">Dashboard</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="logout.php">Logout</a>
           </div>

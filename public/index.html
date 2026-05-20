@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Management System</title>
+  <meta name="description" content="A comprehensive School Management System with Admin, Student, Teacher, and Parent panels for streamlined educational institution operations.">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Roboto', sans-serif; }
+    .btn { margin: 0; }
+    .course-image { width: 100%; height: 170px !important; object-fit: cover; object-position: center; }
+    .hero-section { background: linear-gradient(-45deg, #3923a7 50%, transparent 50%); }
+    .achievements-section { background: #3923a7; }
+    .footer-bg { background: #1a1a2e; }
+    .nav-link:hover { opacity: 0.8; }
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+    .stat-card { border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; }
+    .stat-card:hover { border-color: #ffc107; }
+    .testimonial-card { border: 1px solid #e0e0e0; border-radius: 8px; }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-in { animation: fadeInUp 0.6s ease forwards; }
+    .feature-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark default-color">
+    <a class="navbar-brand" href="#"><b>SMS</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+      aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item">
+          <a href="#" class="nav-link"><i class="fa fa-user mr-2"></i>User Login</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="py-5 shadow hero-section">
+    <div class="container-fluid my-2">
+      <div class="row">
+        <div class="col-lg-6 my-auto animate-in">
+          <h1 class="display-3 font-weight-bold">Admission Open for 2025-2026</h1>
+          <p class="py-lg-4">Empowering education through technology. Our School Management System connects students, teachers, parents, and administrators on a single unified platform.</p>
+          <a href="#about" class="btn btn-lg btn-primary">Learn More</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="col-lg-8 mx-auto card shadow-lg animate-in" style="animation-delay: 0.2s">
+            <div class="card-body py-5">
+              <h3>Inquiry Form</h3>
+              <form action="#" method="post">
+                <div class="md-form">
+                  <input type="text" id="form1" class="form-control">
+                  <label for="form1">Your Name</label>
+                </div>
+                <div class="md-form">
+                  <input type="email" id="email" class="form-control">
+                  <label for="email">Your Email</label>
+                </div>
+                <div class="md-form">
+                  <input type="text" id="mobile" class="form-control">
+                  <label for="mobile">Your Mobile</label>
+                </div>
+                <div class="md-form">
+                  <textarea id="message" class="form-control md-textarea" rows="3"></textarea>
+                  <label for="message">Your Query</label>
+                </div>
+                <button class="btn btn-primary btn-block">Submit Form</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section class="py-5" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 py-5">
+          <h2 class="font-weight-bold">About <br> School Management System</h2>
+          <div class="pr-5">
+            <p>The School Management System is a sophisticated digital platform designed to meet the specific needs of educational institutions. It integrates four distinct panels — Student, Teacher, Admin, and Parent — each offering unique functionalities.</p>
+            <p>Our platform streamlines operations, enhances communication, and fosters collaboration among all stakeholders in the school community, making education management effortless and efficient.</p>
+          </div>
+          <a href="#features" class="btn btn-secondary">Know More</a>
+        </div>
+        <div class="col-lg-6 d-flex align-items-center justify-content-center">
+          <div class="text-center p-5" style="background: linear-gradient(135deg, #3923a7 0%, #6c63ff 100%); border-radius: 20px; color: white;">
+            <i class="fas fa-graduation-cap fa-5x mb-3"></i>
+            <h3>Excellence in Education</h3>
+            <p>Empowering schools since 2020</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / Panels -->
+  <section class="py-5 bg-light" id="features">
+    <div class="text-center mb-5">
+      <h2 class="font-weight-bold">Our Panels</h2>
+      <p class="text-muted">Four integrated panels for comprehensive school management</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 mb-4">
+          <div class="card text-center p-4">
+            <div class="feature-icon" style="background: rgba(57,35,167,0.1);">
+              <i class="fas fa-user-shield fa-2x" style="color: #3923a7;"></i>
+            </div>
+            <h5 class="font-weight-bold">Admin Panel</h5>
+            <p class="text-muted small">Manage users, data, finance, reports, and system configuration</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card text-center p-4">
+            <div class="feature-icon" style="background: rgba(40,167,69,0.1);">
+              <i class="fas fa-user-graduate fa-2x text-success"></i>
+            </div>
+            <h5 class="font-weight-bold">Student Panel</h5>
+            <p class="text-muted small">Dashboard, attendance, grades, assignments, and announcements</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card text-center p-4">
+            <div class="feature-icon" style="background: rgba(0,123,255,0.1);">
+              <i class="fas fa-chalkboard-teacher fa-2x text-primary"></i>
+            </div>
+            <h5 class="font-weight-bold">Teacher Panel</h5>
+            <p class="text-muted small">Class management, grading, assignments, and resource sharing</p>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card text-center p-4">
+            <div class="feature-icon" style="background: rgba(255,193,7,0.1);">
+              <i class="fas fa-users fa-2x text-warning"></i>
+            </div>
+            <h5 class="font-weight-bold">Parent Panel</h5>
+            <p class="text-muted small">Progress tracking, communication, fees, and calendar access</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="py-5" id="courses">
+    <div class="text-center mb-5">
+      <h2 class="font-weight-bold">Our Courses</h2>
+      <p class="text-muted">Explore our wide range of academic programs</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 mb-4">
+          <div class="card">
+            <div class="p-4 text-center" style="background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 4px 4px 0 0;">
+              <i class="fas fa-laptop-code fa-3x text-white"></i>
+            </div>
+            <div class="card-body">
+              <b>Computer Science</b>
+              <p class="card-text"><b>Duration:</b> 4 Years<br><b>Price:</b> 4000/- Rs</p>
+              <button class="btn btn-block btn-primary btn-sm">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card">
+            <div class="p-4 text-center" style="background: linear-gradient(135deg, #f093fb, #f5576c); border-radius: 4px 4px 0 0;">
+              <i class="fas fa-flask fa-3x text-white"></i>
+            </div>
+            <div class="card-body">
+              <b>Science</b>
+              <p class="card-text"><b>Duration:</b> 3 Years<br><b>Price:</b> 4000/- Rs</p>
+              <button class="btn btn-block btn-primary btn-sm">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card">
+            <div class="p-4 text-center" style="background: linear-gradient(135deg, #4facfe, #00f2fe); border-radius: 4px 4px 0 0;">
+              <i class="fas fa-calculator fa-3x text-white"></i>
+            </div>
+            <div class="card-body">
+              <b>Mathematics</b>
+              <p class="card-text"><b>Duration:</b> 3 Years<br><b>Price:</b> 4000/- Rs</p>
+              <button class="btn btn-block btn-primary btn-sm">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 mb-4">
+          <div class="card">
+            <div class="p-4 text-center" style="background: linear-gradient(135deg, #43e97b, #38f9d7); border-radius: 4px 4px 0 0;">
+              <i class="fas fa-book fa-3x text-white"></i>
+            </div>
+            <div class="card-body">
+              <b>English Literature</b>
+              <p class="card-text"><b>Duration:</b> 3 Years<br><b>Price:</b> 4000/- Rs</p>
+              <button class="btn btn-block btn-primary btn-sm">Enroll Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section class="py-5 text-white achievements-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pr-5">
+          <h2>Achievements</h2>
+          <p>Our institution has consistently delivered excellence in education, producing outstanding graduates and maintaining the highest standards of academic integrity.</p>
+          <div class="p-4 mt-3" style="background: rgba(255,255,255,0.1); border-radius: 15px;">
+            <i class="fas fa-trophy fa-3x text-warning mb-3"></i>
+            <h4>Award Winning Institution</h4>
+            <p class="mb-0">Recognized for excellence in education management and innovation.</p>
+          </div>
+        </div>
+        <div class="col-lg-6 my-auto">
+          <div class="row">
+            <div class="col-lg-6 mb-4">
+              <div class="stat-card">
+                <div class="card-body text-center">
+                  <span><i class="text-warning fas fa-graduation-cap fa-2x"></i></span>
+                  <h2 class="my-2 font-weight-bold h1">334</h2>
+                  <hr class="border-warning">
+                  <h4>Graduates</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <div class="stat-card">
+                <div class="card-body text-center">
+                  <span><i class="text-warning fas fa-chalkboard-teacher fa-2x"></i></span>
+                  <h2 class="my-2 font-weight-bold h1">52</h2>
+                  <hr class="border-warning">
+                  <h4>Teachers</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <div class="stat-card">
+                <div class="card-body text-center">
+                  <span><i class="text-warning fas fa-book-open fa-2x"></i></span>
+                  <h2 class="my-2 font-weight-bold h1">28</h2>
+                  <hr class="border-warning">
+                  <h4>Courses</h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+              <div class="stat-card">
+                <div class="card-body text-center">
+                  <span><i class="text-warning fas fa-award fa-2x"></i></span>
+                  <h2 class="my-2 font-weight-bold h1">15</h2>
+                  <hr class="border-warning">
+                  <h4>Awards</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-5" id="events">
+    <div class="text-center mb-5">
+      <h2 class="font-weight-bold">What People Say</h2>
+      <p class="text-muted">Hear from our community members</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="testimonial-card position-relative p-4">
+            <div class="text-center">
+              "The School Management System has transformed how we manage our institution. Communication between teachers and parents has never been easier."
+            </div>
+            <i class="fa fa-quote-left fa-3x position-absolute" style="top:.5rem; left: .5rem; opacity:.2"></i>
+          </div>
+          <div class="text-center mt-3">
+            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center" style="width:80px;height:80px;">
+              <i class="fa fa-user fa-2x text-white"></i>
+            </div>
+            <h6 class="mb-0 font-weight-bold mt-2">Rajesh Kumar</h6>
+            <p><i>School Principal</i></p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="testimonial-card position-relative p-4">
+            <div class="text-center">
+              "As a parent, I love being able to track my child's attendance and grades in real-time. The fee management feature is incredibly convenient."
+            </div>
+            <i class="fa fa-quote-left fa-3x position-absolute" style="top:.5rem; left: .5rem; opacity:.2"></i>
+          </div>
+          <div class="text-center mt-3">
+            <div class="rounded-circle bg-success d-inline-flex align-items-center justify-content-center" style="width:80px;height:80px;">
+              <i class="fa fa-user fa-2x text-white"></i>
+            </div>
+            <h6 class="mb-0 font-weight-bold mt-2">Priya Sharma</h6>
+            <p><i>Parent</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-bg">
+    <div class="py-5 text-white">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4">
+            <h5>Useful Links</h5>
+            <ul class="fa-ul ml-4">
+              <li><a href="#" class="text-light"><i class="fa-li fa fa-angle-right"></i>Home</a></li>
+              <li><a href="#about" class="text-light"><i class="fa-li fa fa-angle-right"></i>About Us</a></li>
+              <li><a href="#courses" class="text-light"><i class="fa-li fa fa-angle-right"></i>Courses</a></li>
+              <li><a href="#" class="text-light"><i class="fa-li fa fa-angle-right"></i>Terms & Conditions</a></li>
+              <li><a href="#" class="text-light"><i class="fa-li fa fa-angle-right"></i>Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5>Social Presence</h5>
+            <div>
+              <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-facebook-f fa-stack-1x fa-inverse text-dark"></i></span>
+              <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-instagram fa-stack-1x fa-inverse text-dark"></i></span>
+              <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x fa-inverse text-dark"></i></span>
+              <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-linkedin fa-stack-1x fa-inverse text-dark"></i></span>
+              <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i class="fab fa-youtube fa-stack-1x fa-inverse text-dark"></i></span>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <h5>Subscribe Now</h5>
+            <form action="#">
+              <div class="form-group">
+                <input type="email" id="email-s" class="form-control" placeholder="Your Email">
+              </div>
+              <button class="btn btn-secondary py-2 btn-block">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <section class="py-2 bg-dark text-light">
+    <div class="container-fluid">
+      Copyright 2020-2026 All Rights Reserved. <a href="#" class="text-light">School Management System</a>
+    </div>
+  </section>
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</body>
+</html>
